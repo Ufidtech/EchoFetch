@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "EchoFetch CLI",
+  "version": "1.0",
+  "description": "Command-line interface for WhatsApp Web.",
+  "permissions": ["storage", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["src/content/injector.js"],
+      "css": ["src/content/styles.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["src/content/main.html"],
+      "matches": ["https://web.whatsapp.com/*"]
+    }
+  ]
+}

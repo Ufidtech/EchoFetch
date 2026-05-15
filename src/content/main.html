@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EchoFetch</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="echo-fetch-hud">
+      <aside id="recent-contacts"></aside>
+      <section id="conversation-history">
+        <header>
+          <input
+            class="glow-search"
+            type="search"
+            placeholder="Search conversations..."
+            aria-label="Search conversations"
+          />
+        </header>
+        <div class="scrollable-messages">
+          <!-- Messages will be displayed here -->
+        </div>
+
+        <footer>
+          <label for="message-input">Message:</label>
+          <input
+            type="text"
+            id="message-input"
+            placeholder="Type a message..."
+          />
+        </footer>
+      </section>
+    </div>
+  </body>
+</html>
