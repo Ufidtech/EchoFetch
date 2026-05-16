@@ -14,17 +14,13 @@ window.addEventListener("keydown", (event) => {
   if (event.altKey && event.key === "s") {
     const hud = document.getElementById("echo-fetch-hud");
 
-    if (hud) {
-      // Toggle the display
-      const isHidden = hud.style.display === "none" || hud.style.display === "";
-      hud.style.display = isHidden ? "grid" : "none";
+     if (hud) {
+      hud.classList.toggle("ef-hidden");
 
-      // If we just showed the HUD, move the cursor to the search bar
-      if (isHidden) {
+      // Check if it's visible now to handle your focus logic
+      if (!hud.classList.contains("ef-hidden")) {
         const searchBar = document.querySelector(".glow-search");
-        if (searchBar) {
-          searchBar.focus();
-        }
+        if (searchBar) searchBar.focus();
       }
     }
   }
